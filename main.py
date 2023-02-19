@@ -30,7 +30,14 @@ def find_mismatch(text):
 
 def main():
     text = input()
-    mismatch = find_mismatch(text)
+    if 'F' in text:
+        file = input()
+        with open(file, 'r') as f:
+            txt = f.read()
+    elif 'I' in text:
+        txt = input()
+    
+    mismatch = find_mismatch(txt)
     # Printing answer, write your code here
     print(mismatch)
 
